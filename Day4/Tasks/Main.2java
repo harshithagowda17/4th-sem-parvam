@@ -1,0 +1,24 @@
+import java.util.ArrayList;
+import java.util.List;
+
+// Assuming Shape, Circle, Rectangle, Triangle are already defined
+
+public class Main {
+    public static void main(String[] args) {
+
+        // Create a list of Shape references
+        List<Shape> shapes = new ArrayList<>();
+
+        // Add one of each shape
+        shapes.add(new Circle(5));
+        shapes.add(new Rectangle(4, 6));
+        shapes.add(new Triangle(10, 3));
+
+        // Loop through and use polymorphism
+        for (Shape s : shapes) {
+            System.out.println(s.getDescription());
+            System.out.println("Area: " + s.calculateArea());
+            System.out.println("-------------------");
+        }
+    }
+}
